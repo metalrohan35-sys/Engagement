@@ -3,172 +3,158 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title> Ashish ❤️ Jiya | Engagement</title>
+<title>Ashish & Jiya | Engagement</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Great+Vibes&family=Poppins:wght@300;400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;400&display=swap" rel="stylesheet">
 
 <style>
-*{margin:0;padding:0;box-sizing:border-box;}
-
-body {
-    height:100vh;
-    display:flex;
-    justify-content:center;
-    align-items:center;
+body{
+    margin:0;
     font-family:'Poppins',sans-serif;
-    background: url('https://images.unsplash.com/photo-1519741497674-611481863552') no-repeat center center/cover;
-    color:white;
-    overflow:hidden;
-}
-
-/* Dark overlay */
-body::before{
-    content:"";
-    position:absolute;
-    width:100%;
-    height:100%;
-    background:rgba(0,0,0,0.65);
-    top:0;
-    left:0;
-}
-
-/* Main Card */
-.card{
-    position:relative;
+    background:#ffffff;
+    color:#333;
     text-align:center;
-    padding:50px 30px;
-    width:90%;
-    max-width:600px;
-    background:rgba(255,255,255,0.08);
-    backdrop-filter:blur(15px);
-    border-radius:20px;
-    box-shadow:0 0 50px rgba(255,215,0,0.4);
-    animation:fadeIn 2s ease;
+    scroll-behavior:smooth;
 }
 
-.title{
-    font-family:'Cinzel',serif;
-    font-size:22px;
-    letter-spacing:3px;
-    margin-bottom:15px;
-    color:#ffd700;
+.section{
+    padding:80px 20px;
+}
+
+h1{
+    font-family:'Playfair Display',serif;
+    font-size:42px;
 }
 
 .names{
-    font-family:'Great Vibes',cursive;
-    font-size:60px;
-    margin:15px 0;
+    font-size:36px;
+    font-weight:bold;
+    margin:20px 0;
 }
 
-.details{
-    margin:10px 0;
+.subtitle{
+    color:#777;
     font-size:18px;
 }
 
-.countdown{
-    margin-top:20px;
+.details{
     font-size:20px;
-    color:#ffd700;
-    font-weight:bold;
+    margin:10px 0;
 }
 
 button{
-    margin:12px 6px;
-    padding:10px 22px;
-    border:none;
-    border-radius:30px;
-    background:#ffd700;
-    color:black;
-    font-weight:bold;
+    margin-top:20px;
+    padding:10px 25px;
+    border:1px solid #333;
+    background:transparent;
     cursor:pointer;
+    font-size:16px;
     transition:0.3s;
 }
 
 button:hover{
-    background:white;
+    background:#333;
+    color:white;
 }
 
-@keyframes fadeIn{
-    from{opacity:0; transform:translateY(30px);}
-    to{opacity:1; transform:translateY(0);}
+/* Gallery */
+.gallery{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:15px;
 }
 
-/* Floating particles */
-.particle{
-    position:absolute;
-    width:6px;
-    height:6px;
-    background:#ffd700;
-    border-radius:50%;
-    animation:float 10s linear infinite;
-    opacity:0.7;
+.gallery img{
+    width:280px;
+    border-radius:10px;
 }
 
-@keyframes float{
-    from{transform:translateY(100vh);}
-    to{transform:translateY(-10vh);}
+/* Blessing Form */
+input, textarea{
+    width:90%;
+    max-width:400px;
+    padding:10px;
+    margin:8px 0;
+    border:1px solid #ccc;
+    border-radius:5px;
+}
+
+textarea{
+    resize:none;
+    height:100px;
+}
+
+.footer{
+    background:#f5f5f5;
+    padding:40px 20px;
+    font-size:16px;
 }
 </style>
 </head>
 
 <body>
 
-<div class="card">
-    <div class="title">YOU ARE INVITED TO THE ENGAGEMENT OF</div>
-    <div class="names">Ashish ❤️ Jiya</div>
-
-    <div class="details">📅 02 March 2026</div>
-    <div class="details">🕒 12:00 PM Onwards</div>
-    <div class="details">📍Hotel Bluebird in Daltonganj (Medininagar) Palamu, Jharkhand, 822102</div>
-
-    <div class="countdown" id="timer"></div>
-
-    <button onclick="openMap()">View Location</button>
-    <button onclick="whatsappRSVP()">RSVP</button>
-</div>
-
-<!-- Background Music (Optional) -->
+<!-- Background Music -->
 <audio autoplay loop>
-  <source src="https://www.bensound.com/bensound-music/bensound-romantic.mp3" type="audio/mpeg">
+<source src="https://www.bensound.com/bensound-music/bensound-romantic.mp3" type="audio/mpeg">
 </audio>
 
+<!-- Section 1 -->
+<div class="section">
+    <h1>Engagement Invitation</h1>
+    <div class="subtitle">Together with their families</div>
+    <div class="names">Ashish ❤️ Jiya</div>
+    <div class="subtitle">Request the pleasure of your company</div>
+</div>
+
+<!-- Section 2 -->
+<div class="section" style="background:#fafafa;">
+    <div class="details">📅 02 March 2026</div>
+    <div class="details">🕛 12:00 PM Onward</div>
+</div>
+
+<!-- Section 3 -->
+<div class="section">
+    <div class="details">
+        📍 Hotel Bluebird <br>
+        Daltonganj (Medininagar), Palamu, Jharkhand – 822102
+    </div>
+
+    <button onclick="addToCalendar()">Add to Calendar</button>
+</div>
+
+<!-- Photo Gallery -->
+<div class="section" style="background:#fafafa;">
+    <h1>Our Moments</h1>
+    <div class="gallery">
+        <img src="https://images.unsplash.com/photo-1522673607200-164d1b6ce486">
+        <img src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc">
+        <img src="https://images.unsplash.com/photo-1519222970733-f546218fa6d7">
+    </div>
+</div>
+
+<!-- Blessing Section -->
+<div class="section">
+    <h1>Leave Your Blessings</h1>
+    <input type="text" placeholder="Your Name"><br>
+    <textarea placeholder="Write your blessings..."></textarea><br>
+    <button onclick="thankYou()">Send Blessings</button>
+</div>
+
+<div class="footer">
+    With love & blessings ❤️ <br>
+    We look forward to celebrating with you.
+</div>
+
 <script>
-// Countdown
-const eventDate = new Date("March 02, 2026 12:00:00").getTime();
-const x = setInterval(function() {
-    const now = new Date().getTime();
-    const distance = eventDate - now;
-
-    const days = Math.floor(distance / (1000*60*60*24));
-    const hours = Math.floor((distance % (1000*60*60*24))/(1000*60*60));
-    const minutes = Math.floor((distance % (1000*60*60))/(1000*60));
-
-    document.getElementById("timer").innerHTML =
-    "⏳ " + days + " Days " + hours + " Hours " + minutes + " Minutes Left";
-
-    if(distance < 0){
-        clearInterval(x);
-        document.getElementById("timer").innerHTML = "🎉 The Celebration Has Begun!";
-    }
-}, 1000);
-
-// Google Map
-function openMap(){
-    window.open("https://www.google.com/maps", "_blank");
+function addToCalendar(){
+    const url="https://www.google.com/calendar/render?action=TEMPLATE&text=Ashish%20%26%20Jiya%20Engagement&dates=20260302T120000/20260302T150000&details=Engagement%20Ceremony&location=Hotel%20Bluebird%20Daltonganj%20Palamu%20Jharkhand";
+    window.open(url,"_blank");
 }
 
-// WhatsApp RSVP
-function whatsappRSVP(){
-    window.open("https://wa.me/91XXXXXXXXXX?text=Excited%20to%20attend%20Ashish%20%26%20Jiya's%20Engagement!", "_blank");
-}
-
-// Create floating particles
-for(let i=0;i<25;i++){
-    let particle=document.createElement("div");
-    particle.className="particle";
-    particle.style.left=Math.random()*100+"%";
-    particle.style.animationDuration=(5+Math.random()*10)+"s";
-    document.body.appendChild(particle);
+function thankYou(){
+    alert("Thank you for your blessings ❤️");
 }
 </script>
 
