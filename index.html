@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Engagement Invitation</title>
+
+<!-- Google Font -->
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;400&display=swap" rel="stylesheet">
+
+<style>
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    background: linear-gradient(to right, #f8e8ee, #e3f2fd);
+    color: #333;
+}
+
+.container {
+    padding: 40px 20px;
+}
+
+h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 42px;
+    margin-bottom: 10px;
+}
+
+h2 {
+    font-weight: 400;
+    margin-top: 0;
+}
+
+.names {
+    font-size: 36px;
+    font-weight: bold;
+    margin: 20px 0;
+    color: #b76e79;
+}
+
+.details {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+.venue {
+    margin-top: 20px;
+}
+
+button {
+    margin-top: 25px;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 30px;
+    background-color: #b76e79;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background-color: #944e5a;
+}
+
+.footer {
+    margin-top: 40px;
+    font-size: 14px;
+    opacity: 0.7;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <h2>You're Invited To The Engagement Of</h2>
+
+    <div class="names">
+        Rohit ❤️ Anjali
+    </div>
+
+    <div class="details">
+        📅 15th March 2026
+    </div>
+
+    <div class="details">
+        🕒 5:00 PM Onwards
+    </div>
+
+    <div class="details venue">
+        📍 The Royal Palace Banquet<br>
+        Jamshedpur, Jharkhand
+    </div>
+
+    <button onclick="addToCalendar()">Add to Calendar</button>
+
+    <div class="footer">
+        With Love & Blessings ❤️ <br>
+        We look forward to celebrating with you!
+    </div>
+
+</div>
+
+<script>
+function addToCalendar() {
+    const event = {
+        title: "Rohit & Anjali Engagement",
+        start: "20260315T170000",
+        end: "20260315T210000",
+        location: "The Royal Palace Banquet, Jamshedpur",
+        description: "Join us for the engagement celebration!"
+    };
+
+    const url = `https://www.google.com/calendar/render?action=TEMPLATE&text=${event.title}&dates=${event.start}/${event.end}&details=${event.description}&location=${event.location}`;
+    window.open(url, '_blank');
+}
+</script>
+
+</body>
+</html>
