@@ -3,80 +3,84 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ashish ❤️ Jiya Wedding Invitation</title>
+<title>Ashish ❤️ Jiya | Wedding Invitation</title>
 
 <style>
-body {
-  margin: 0;
+body{
+  margin:0;
+  padding:0;
   font-family: 'Georgia', serif;
-  background: linear-gradient(to bottom, #fef9f3, #e6f4ea);
-  text-align: center;
-  color: #2f3e46;
+  background: linear-gradient(135deg,#fff8f0,#e9f5ec);
+  text-align:center;
+  color:#2d3436;
 }
 
-.container {
-  padding: 40px 20px;
+.container{
+  padding:40px 20px;
 }
 
-h1 {
-  font-size: 40px;
-  margin: 10px 0;
+.ganesh{
+  font-size:22px;
+  color:#b08968;
+  margin-bottom:15px;
 }
 
-.subtitle {
-  font-size: 18px;
-  letter-spacing: 2px;
-  color: #6b705c;
+.subtitle{
+  font-size:18px;
+  letter-spacing:2px;
+  color:#6c757d;
 }
 
-.ganesh {
-  font-size: 20px;
-  margin-bottom: 20px;
-  color: #9c6644;
+.names{
+  font-size:42px;
+  margin:15px 0;
+  color:#344e41;
 }
 
-.circle-frame {
-  width: 280px;
-  height: 280px;
-  margin: 30px auto;
-  border-radius: 50%;
-  overflow: hidden;
-  border: 10px solid #d8f3dc;
-  box-shadow: 0 15px 40px rgba(0,0,0,0.2);
-  background: white;
+.circle-frame{
+  width:300px;
+  height:300px;
+  margin:30px auto;
+  border-radius:50%;
+  overflow:hidden;
+  border:10px solid #d8f3dc;
+  box-shadow:0 20px 40px rgba(0,0,0,0.2);
+  background:white;
 }
 
-.circle-frame img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: top center;   /* crops bottom */
-  transform: scale(1.35);        /* zoom for half body */
+.circle-frame img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  object-position:top center; /* crop bottom */
+  transform:scale(1.35); /* zoom for half body */
 }
 
-.details {
-  margin-top: 20px;
-  font-size: 18px;
-  line-height: 1.8;
+.details{
+  font-size:18px;
+  margin-top:20px;
+  line-height:1.8;
 }
 
-.footer {
-  margin-top: 30px;
-  font-size: 16px;
-  color: #588157;
+.footer{
+  margin-top:25px;
+  font-size:16px;
+  color:#588157;
 }
-button {
-  margin-top: 20px;
-  padding: 10px 20px;
-  border: none;
-  background-color: #40916c;
-  color: white;
-  font-size: 16px;
-  border-radius: 5px;
-  cursor: pointer;
+
+button{
+  margin-top:25px;
+  padding:12px 25px;
+  border:none;
+  background:#40916c;
+  color:white;
+  font-size:16px;
+  border-radius:30px;
+  cursor:pointer;
 }
-button:hover {
-  background-color: #2d6a4f;
+
+button:hover{
+  background:#2d6a4f;
 }
 </style>
 </head>
@@ -89,9 +93,9 @@ button:hover {
 
 <div class="subtitle">Together With Their Families</div>
 
-<h1>Ashish ❤️ Jiya</h1>
+<div class="names">Ashish ❤️ Jiya</div>
 
-<div class="subtitle">Are Getting Married</div>
+<div class="subtitle">Request The Pleasure Of Your Company</div>
 
 <!-- Circle Photo -->
 <div class="circle-frame">
@@ -105,20 +109,19 @@ button:hover {
 </div>
 
 <div class="footer">
-  We request the honor of your presence to bless the couple.
+  With love, we invite you to celebrate this joyous occasion.
 </div>
 
 <button onclick="playMusic()">Play Music 🎵</button>
 
 </div>
 
-<!-- Background Music -->
 <audio id="bgMusic" loop>
   <source src="music.mp3" type="audio/mpeg">
 </audio>
 
 <script>
-function playMusic() {
+function playMusic(){
   document.getElementById("bgMusic").play();
 }
 </script>
