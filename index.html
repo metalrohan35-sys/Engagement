@@ -3,119 +3,172 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Engagement Invitation</title>
+<title>Ashish ❤️ Jiya | Engagement</title>
 
-<!-- Google Font -->
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Great+Vibes&family=Poppins:wght@300;400&display=swap" rel="stylesheet">
 
 <style>
+*{margin:0;padding:0;box-sizing:border-box;}
+
 body {
-    margin: 0;
-    font-family: 'Poppins', sans-serif;
-    text-align: center;
-    background: linear-gradient(to right, #f8e8ee, #e3f2fd);
-    color: #333;
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-family:'Poppins',sans-serif;
+    background: url('https://images.unsplash.com/photo-1519741497674-611481863552') no-repeat center center/cover;
+    color:white;
+    overflow:hidden;
 }
 
-.container {
-    padding: 40px 20px;
+/* Dark overlay */
+body::before{
+    content:"";
+    position:absolute;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.65);
+    top:0;
+    left:0;
 }
 
-h1 {
-    font-family: 'Playfair Display', serif;
-    font-size: 42px;
-    margin-bottom: 10px;
+/* Main Card */
+.card{
+    position:relative;
+    text-align:center;
+    padding:50px 30px;
+    width:90%;
+    max-width:600px;
+    background:rgba(255,255,255,0.08);
+    backdrop-filter:blur(15px);
+    border-radius:20px;
+    box-shadow:0 0 50px rgba(255,215,0,0.4);
+    animation:fadeIn 2s ease;
 }
 
-h2 {
-    font-weight: 400;
-    margin-top: 0;
+.title{
+    font-family:'Cinzel',serif;
+    font-size:22px;
+    letter-spacing:3px;
+    margin-bottom:15px;
+    color:#ffd700;
 }
 
-.names {
-    font-size: 36px;
-    font-weight: bold;
-    margin: 20px 0;
-    color: #b76e79;
+.names{
+    font-family:'Great Vibes',cursive;
+    font-size:60px;
+    margin:15px 0;
 }
 
-.details {
-    font-size: 18px;
-    margin: 10px 0;
+.details{
+    margin:10px 0;
+    font-size:18px;
 }
 
-.venue {
-    margin-top: 20px;
+.countdown{
+    margin-top:20px;
+    font-size:20px;
+    color:#ffd700;
+    font-weight:bold;
 }
 
-button {
-    margin-top: 25px;
-    padding: 12px 25px;
-    border: none;
-    border-radius: 30px;
-    background-color: #b76e79;
-    color: white;
-    font-size: 16px;
-    cursor: pointer;
-    transition: 0.3s;
+button{
+    margin:12px 6px;
+    padding:10px 22px;
+    border:none;
+    border-radius:30px;
+    background:#ffd700;
+    color:black;
+    font-weight:bold;
+    cursor:pointer;
+    transition:0.3s;
 }
 
-button:hover {
-    background-color: #944e5a;
+button:hover{
+    background:white;
 }
 
-.footer {
-    margin-top: 40px;
-    font-size: 14px;
-    opacity: 0.7;
+@keyframes fadeIn{
+    from{opacity:0; transform:translateY(30px);}
+    to{opacity:1; transform:translateY(0);}
+}
+
+/* Floating particles */
+.particle{
+    position:absolute;
+    width:6px;
+    height:6px;
+    background:#ffd700;
+    border-radius:50%;
+    animation:float 10s linear infinite;
+    opacity:0.7;
+}
+
+@keyframes float{
+    from{transform:translateY(100vh);}
+    to{transform:translateY(-10vh);}
 }
 </style>
 </head>
 
 <body>
 
-<div class="container">
+<div class="card">
+    <div class="title">YOU ARE INVITED TO THE ENGAGEMENT OF</div>
+    <div class="names">Ashish ❤️ Jiya</div>
 
-    <h2>You're Invited To The Engagement Of</h2>
+    <div class="details">📅 15 March 2026</div>
+    <div class="details">🕒 6:00 PM Onwards</div>
+    <div class="details">📍 The Royal Palace Banquet, Jamshedpur</div>
 
-    <div class="names">
-        Ashish ❤️ Jiya
-    </div>
+    <div class="countdown" id="timer"></div>
 
-    <div class="details">
-        📅 02nd March 2026
-    </div>
-
-    <div class="details">
-        🕒 12:00 PM Onwards
-    </div>
-
-    <div class="details venue">
-        📍 Hotel Bluebird in Daltonganj (Medininagar) Jharkhand, 822102<br>
-        
-    </div>
-
-    <button onclick="addToCalendar()">Add to Calendar</button>
-
-    <div class="footer">
-        With Love & Blessings ❤️ <br>
-        We look forward to celebrating with you!
-    </div>
-
+    <button onclick="openMap()">View Location</button>
+    <button onclick="whatsappRSVP()">RSVP</button>
 </div>
 
-<script>
-function addToCalendar() {
-    const event = {
-        title: "Ashish & Jiya Engagement",
-        start: "20260315T170000",
-        end: "20260315T210000",
-        location: "Hotel Bluebird in Daltonganj (Medininagar) Jharkhand, 822102",
-        description: "Join us for the engagement celebration!"
-    };
+<!-- Background Music (Optional) -->
+<audio autoplay loop>
+  <source src="https://www.bensound.com/bensound-music/bensound-romantic.mp3" type="audio/mpeg">
+</audio>
 
-    const url = `https://www.google.com/calendar/render?action=TEMPLATE&text=${event.title}&dates=${event.start}/${event.end}&details=${event.description}&location=${event.location}`;
-    window.open(url, '_blank');
+<script>
+// Countdown
+const eventDate = new Date("March 15, 2026 18:00:00").getTime();
+const x = setInterval(function() {
+    const now = new Date().getTime();
+    const distance = eventDate - now;
+
+    const days = Math.floor(distance / (1000*60*60*24));
+    const hours = Math.floor((distance % (1000*60*60*24))/(1000*60*60));
+    const minutes = Math.floor((distance % (1000*60*60))/(1000*60));
+
+    document.getElementById("timer").innerHTML =
+    "⏳ " + days + " Days " + hours + " Hours " + minutes + " Minutes Left";
+
+    if(distance < 0){
+        clearInterval(x);
+        document.getElementById("timer").innerHTML = "🎉 The Celebration Has Begun!";
+    }
+}, 1000);
+
+// Google Map
+function openMap(){
+    window.open("https://www.google.com/maps", "_blank");
+}
+
+// WhatsApp RSVP
+function whatsappRSVP(){
+    window.open("https://wa.me/91XXXXXXXXXX?text=Excited%20to%20attend%20Ashish%20%26%20Jiya's%20Engagement!", "_blank");
+}
+
+// Create floating particles
+for(let i=0;i<25;i++){
+    let particle=document.createElement("div");
+    particle.className="particle";
+    particle.style.left=Math.random()*100+"%";
+    particle.style.animationDuration=(5+Math.random()*10)+"s";
+    document.body.appendChild(particle);
 }
 </script>
 
