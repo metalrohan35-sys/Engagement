@@ -1,36 +1,33 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Ashish & Jiya Engagement</title>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Ashish & Jiya Engagement Invitation</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
 <script src="https://cdn.tailwindcss.com"></script>
 
 <style>
 :root{
---primary:#5a8a81;
+--primary:#0f766e;
 --secondary:#d4a373;
---accent:#eeb7b4;
 --bg-light:#fdfaf7;
 }
 
 body{
 font-family:"Montserrat",sans-serif;
 background:var(--bg-light);
+margin:0;
 overflow-x:hidden;
-scroll-snap-type:y mandatory;
 }
 
 section{
 height:100vh;
-scroll-snap-align:start;
 display:flex;
 flex-direction:column;
-align-items:center;
 justify-content:center;
+align-items:center;
 text-align:center;
 padding:20px;
 }
@@ -38,156 +35,174 @@ padding:20px;
 .font-script{font-family:"Great Vibes",cursive;}
 .font-serif{font-family:"Playfair Display",serif;}
 
-.petal{
-position:fixed;
-top:-10px;
-background:var(--accent);
-border-radius:150% 0 150% 0;
-opacity:.6;
-animation:fall linear infinite;
+.couple-photo{
+animation:zoom 20s infinite alternate;
 }
 
-@keyframes fall{
-to{transform:translateY(110vh) rotate(360deg);opacity:0;}
+@keyframes zoom{
+from{transform:scale(1);}
+to{transform:scale(1.1);}
+}
+
+.glass{
+background:rgba(255,255,255,0.85);
+backdrop-filter:blur(10px);
+padding:30px;
+border-radius:30px;
+box-shadow:0 10px 40px rgba(0,0,0,0.1);
 }
 </style>
 </head>
 
 <body>
 
-<!-- HEADER -->
 <header class="text-center py-4 bg-white shadow-sm">
-<p class="text-xs tracking-[0.3em] text-emerald-800 font-bold">
-:: SHREE GANESHAY NAMAH ::
+<p class="text-sm tracking-widest text-emerald-800 font-bold">
+ॐ गं गणपतये नमः
 </p>
 </header>
 
 <!-- HERO SECTION -->
 <section>
 
-<p class="font-serif italic mb-4 text-gray-600">
+<p class="font-serif italic text-gray-600 mb-4">
 We request the honor of your presence
 </p>
 
-<!-- PHOTO -->
-<div class="w-64 h-64 rounded-full border-8 border-emerald-200 overflow-hidden shadow-xl mb-6">
-<img src="couple.jpg" alt="Ashish & Jiya" style="width:300px; border-radius:20px;">
+<div class="w-64 h-64 rounded-full overflow-hidden shadow-2xl border-8 border-emerald-100 mb-6">
+<img src="./couple.jpg" alt="Ashish & Jiya" class="w-full h-full object-cover couple-photo">
 </div>
 
-<h2 class="uppercase tracking-[0.3em] text-xs text-emerald-800 mb-2">
+<h2 class="uppercase tracking-widest text-xs text-emerald-800 mb-2">
 The Engagement of
 </h2>
 
-<h1 class="font-script text-6xl text-emerald-800 mb-4">
+<h1 class="font-script text-6xl text-emerald-800 mb-6">
 Ashish & Jiya
 </h1>
 
-<div class="border-y border-emerald-100 py-3 px-6 bg-white">
+<div class="border-y py-3 px-6 bg-white/50">
 <p class="font-serif text-xl text-emerald-900">
 02 March 2026
+</p>
+<p class="text-xs tracking-widest text-amber-700 mt-1">
+12:00 PM Onwards
 </p>
 </div>
 
 </section>
 
-<!-- DETAILS -->
-<section class="bg-emerald-900 text-white">
+<!-- VENUE SECTION -->
+<section style="background:#0f766e; color:white;">
 
-<div class="bg-white/90 p-8 rounded-3xl text-gray-800 shadow-2xl max-w-md">
+<div class="glass text-gray-800 max-w-md">
 
-<p class="font-bold tracking-widest text-xs text-emerald-800 mb-3">
+<h3 class="font-serif italic text-lg mb-4">
+Engagement Ceremony
+</h3>
+
+<p class="font-bold text-sm tracking-widest mb-3">
 MONDAY, 02 MARCH 2026
 </p>
 
-<div class="text-3xl font-serif mb-5 text-yellow-600">
-12:00 PM Onward
-</div>
+<p class="text-2xl font-serif mb-6">
+12:00 PM Onwards
+</p>
 
-<p class="font-semibold border-b border-emerald-100 pb-2 inline-block px-4">
+<p class="font-semibold text-lg mb-2">
 Hotel Bluebird
 </p>
 
-<p class="text-sm text-gray-600 mt-3 leading-relaxed">
+<p class="text-sm leading-relaxed">
 Daltonganj (Medininagar)<br>
-Palamu, Jharkhand – 822102
+Palamu, Jharkhand - 822102
 </p>
 
-<a href="https://www.google.com/maps/search/Hotel+Bluebird+Daltonganj"
+<a href="https://www.google.com/maps/search/Hotel+Bluebird+Daltonganj" 
 target="_blank"
-class="mt-6 inline-block bg-emerald-800 text-white px-6 py-3 rounded-full text-xs uppercase tracking-widest">
-Open in Maps 📍
+class="inline-block mt-6 bg-emerald-800 text-white px-6 py-2 rounded-full text-xs tracking-widest">
+Open in Maps
 </a>
 
 </div>
 
 </section>
 
-<!-- BLESSING -->
+<!-- BLESSING SECTION -->
 <section>
 
-<h2 class="font-script text-4xl text-emerald-800 mb-3">
+<h2 class="font-script text-5xl text-emerald-800 mb-4">
 Leave a Blessing
 </h2>
 
-<p class="font-serif italic text-gray-400 mb-6">
+<p class="italic text-gray-500 mb-6">
 Your wishes mean the world to us
 </p>
 
-<div class="bg-emerald-50 p-6 rounded-3xl border border-emerald-100 max-w-sm w-full">
+<div class="max-w-sm w-full">
 
-<input type="text" placeholder="Your Name"
-class="w-full px-4 py-3 rounded-xl border mb-3">
+<input type="text" id="guest-name" placeholder="Your Name"
+class="w-full mb-3 px-4 py-3 rounded-xl border border-emerald-200">
 
-<textarea placeholder="Write your blessing..."
+<textarea id="guest-wish" placeholder="Write your blessing..."
 rows="3"
-class="w-full px-4 py-3 rounded-xl border mb-3"></textarea>
+class="w-full mb-3 px-4 py-3 rounded-xl border border-emerald-200"></textarea>
 
-<button onclick="alert('Thank you for your blessings 💞')"
-class="w-full bg-emerald-800 text-white py-3 rounded-xl uppercase text-xs tracking-widest">
+<button onclick="showThankYou()"
+class="w-full bg-emerald-800 text-white py-3 rounded-xl tracking-widest text-sm">
 Send Your Love ❤
 </button>
 
 </div>
 
-<div class="mt-8 font-script text-5xl text-emerald-800">
+<h3 class="font-script text-4xl text-emerald-800 mt-12">
 Ashish & Jiya
-</div>
+</h3>
 
 </section>
 
 <!-- MUSIC BUTTON -->
+<div class="fixed bottom-5 left-5">
 <button onclick="toggleAudio()"
-style="position:fixed;bottom:20px;left:20px;background:white;border-radius:50%;width:50px;height:50px;box-shadow:0 4px 10px rgba(0,0,0,.2);">
-<span id="audioIcon">🎵</span>
+class="w-12 h-12 bg-white shadow-lg rounded-full flex items-center justify-center text-xl">
+<span id="audio-icon">▶</span>
 </button>
+</div>
 
-<audio id="music" loop>
-<source src="song.mp3" type="audio/mpeg">
+<audio id="bg-music" loop>
+<source src="./music.mp3" type="audio/mpeg">
 </audio>
 
 <script>
-const music=document.getElementById("music");
-const icon=document.getElementById("audioIcon");
+
+const music=document.getElementById("bg-music");
+const icon=document.getElementById("audio-icon");
+let playing=false;
 
 function toggleAudio(){
-if(music.paused){
+if(!playing){
 music.play();
 icon.innerText="⏸";
+playing=true;
 }else{
 music.pause();
-icon.innerText="🎵";
+icon.innerText="▶";
+playing=false;
 }
 }
 
-setInterval(()=>{
-const petal=document.createElement("div");
-petal.className="petal";
-petal.style.left=Math.random()*100+"vw";
-petal.style.width=petal.style.height=Math.random()*10+5+"px";
-petal.style.animationDuration=Math.random()*5+5+"s";
-document.body.appendChild(petal);
-setTimeout(()=>petal.remove(),9000);
-},700);
+// autoplay after first click anywhere
+document.addEventListener("click",function first(){
+music.play().catch(()=>{});
+icon.innerText="⏸";
+playing=true;
+document.removeEventListener("click",first);
+});
+
+function showThankYou(){
+alert("Thank you for your blessing 💕");
+}
+
 </script>
 
 </body>
